@@ -306,129 +306,137 @@
     </div>
 
     <!-- Content Row -->
-    <div class="row">
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Residential / Commercial</h2>
-            <p class="card-text">The most popular method of residential construction in North America is wood-framed
-              construction. Typical construction
-              steps for a single-family or small multi-family house are:</p>
-          </div>
-          <div class="card-footer">
-            <!-- <a href="#" class="btn btn-primary btn-sm">Pictures</a>
+    <!-- Services Section -->
+    <section class="page-section" id="services">
+
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Residential / Commercial</h2>
+              <p class="card-text">The most popular method of residential construction in North America is wood-framed
+                construction. Typical construction
+                steps for a single-family or small multi-family house are:</p>
+            </div>
+            <div class="card-footer">
+              <!-- <a href="#" class="btn btn-primary btn-sm">Pictures</a>
             <a href="" target="_blank" class="btn btn-secondary js-scroll-trigger">Pictures</a> -->
 
-            <!-- </div>
+              <!-- </div>
         </div>
       </div> -->
 
-            <!-- Slideshow Container Start -->
+              <!-- Slideshow Container Start -->
 
-            <h2>Slideshow</h2>
-            <p>Flooring:</p>
+              <h2>Slideshow</h2>
+              <p>Flooring:</p>
 
-            <div class="slideshow-container">
+              <div class="slideshow-container">
 
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="img/img3.JPG" style="width:100%">
-                <div class="text">Before</div>
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="img/img3.JPG" style="width:100%">
+                  <div class="text">Before</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="img/img2.JPG" style="width:100%">
+                  <div class="text">During</div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="img/img1.JPG" style="width:100%">
+                  <div class="text">After</div>
+                </div>
+
+              </div>
+              <br>
+
+              <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
 
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="img/img2.JPG" style="width:100%">
-                <div class="text">During</div>
-              </div>
+              <script>
+                var slideIndex = 0;
+                showSlides();
 
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="img/img1.JPG" style="width:100%">
-                <div class="text">After</div>
-              </div>
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) { slideIndex = 1 }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex - 1].style.display = "block";
+                  dots[slideIndex - 1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+              </script>
 
             </div>
-            <br>
+          </div>
+        </div>
 
-            <div style="text-align:center">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+        <!-- Slideshow Container End-->
+
+
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Sustainability in construction</h2>
+              <p class="card-text">Sustainability during the construction phase is one of the aspects of “green
+                building,"
+                defined by the United States
+                Environmental Protection Agency (EPA) as "the practice of creating structures and using processes that
+                are
+                environmentally responsible and resource-efficient throughout a building's life-cycle from siting to
+                design,
+                construction, operation, maintenance, renovation and deconstruction."</p>
             </div>
-
-            <script>
-              var slideIndex = 0;
-              showSlides();
-
-              function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
-              }
-            </script>
-
+            <div class="card-footer">
+              <a href="https://en.wikipedia.org/wiki/Sustainability_in_construction" target="_blank"
+                class="btn btn-secondary js-scroll-trigger">Link</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Slideshow Container End-->
-
-
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Sustainability in construction</h2>
-            <p class="card-text">Sustainability during the construction phase is one of the aspects of “green building,"
-              defined by the United States
-              Environmental Protection Agency (EPA) as "the practice of creating structures and using processes that are
-              environmentally responsible and resource-efficient throughout a building's life-cycle from siting to
-              design,
-              construction, operation, maintenance, renovation and deconstruction."</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://en.wikipedia.org/wiki/Sustainability_in_construction" target="_blank"
-              class="btn btn-secondary js-scroll-trigger">Link</a>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Construction Management</h2>
+              <p class="card-text">In this arrangement the client plays an active role in the procurement system by
+                entering into separate contracts with
+                the designer (architect or engineer), the construction manager, and individual trade contractors. The
+                client takes on
+                the contractual role, while the construction or project manager provides the active role of managing the
+                separate trade
+                contracts, and ensuring that they complete all work smoothly and effectively together.</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://en.wikipedia.org/wiki/Construction_management" target="_blank"
+                class="btn btn-secondary js-scroll-trigger">Link</a>
+            </div>
           </div>
         </div>
+
+        <!-- /.col-md-4 -->
+        <!-- Contact Section -->
+        <section class="page-section" id="contact">
+
+
       </div>
-
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Construction Management</h2>
-            <p class="card-text">In this arrangement the client plays an active role in the procurement system by
-              entering into separate contracts with
-              the designer (architect or engineer), the construction manager, and individual trade contractors. The
-              client takes on
-              the contractual role, while the construction or project manager provides the active role of managing the
-              separate trade
-              contracts, and ensuring that they complete all work smoothly and effectively together.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://en.wikipedia.org/wiki/Construction_management" target="_blank"
-              class="btn btn-secondary js-scroll-trigger">Link</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- /.col-md-4 -->
-
-    </div>
-    <!-- /.row -->
+      <!-- /.row -->
 
   </div>
   <!-- /.container -->
