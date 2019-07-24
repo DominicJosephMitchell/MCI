@@ -16,6 +16,102 @@
   <!-- Custom styles for this template -->
   <link href="css/small-business.css" rel="stylesheet">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -214,42 +310,121 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Residential </h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam,
-              maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+            <h2 class="card-title">Residential / Commercial</h2>
+            <p class="card-text">The most popular method of residential construction in North America is wood-framed
+              construction. Typical construction
+              steps for a single-family or small multi-family house are:</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+            <!-- <a href="#" class="btn btn-primary btn-sm">Pictures</a>
+            <a href="" target="_blank" class="btn btn-secondary js-scroll-trigger">Pictures</a> -->
+
+            <!-- </div>
+        </div>
+      </div> -->
+
+            <!-- Slideshow Container Start -->
+
+            <h2>Slideshow</h2>
+            <p>Flooring:</p>
+
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/img3.JPG" style="width:100%">
+                <div class="text">Before</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/img2.JPG" style="width:100%">
+                <div class="text">During</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/img1.JPG" style="width:100%">
+                <div class="text">After</div>
+              </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <script>
+              var slideIndex = 0;
+              showSlides();
+
+              function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+              }
+            </script>
+
           </div>
         </div>
       </div>
+
+      <!-- Slideshow Container End-->
+
+
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Commercial</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at
-              dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi
-              labore.</p>
+            <h2 class="card-title">Sustainability in construction</h2>
+            <p class="card-text">Sustainability during the construction phase is one of the aspects of “green building,"
+              defined by the United States
+              Environmental Protection Agency (EPA) as "the practice of creating structures and using processes that are
+              environmentally responsible and resource-efficient throughout a building's life-cycle from siting to
+              design,
+              construction, operation, maintenance, renovation and deconstruction."</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+            <a href="https://en.wikipedia.org/wiki/Sustainability_in_construction" target="_blank"
+              class="btn btn-secondary js-scroll-trigger">Link</a>
           </div>
         </div>
       </div>
+
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Wholesale</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam,
-              maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+            <h2 class="card-title">Construction Management</h2>
+            <p class="card-text">In this arrangement the client plays an active role in the procurement system by
+              entering into separate contracts with
+              the designer (architect or engineer), the construction manager, and individual trade contractors. The
+              client takes on
+              the contractual role, while the construction or project manager provides the active role of managing the
+              separate trade
+              contracts, and ensuring that they complete all work smoothly and effectively together.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+            <a href="https://en.wikipedia.org/wiki/Construction_management" target="_blank"
+              class="btn btn-secondary js-scroll-trigger">Link</a>
           </div>
         </div>
       </div>
+
       <!-- /.col-md-4 -->
 
     </div>
